@@ -6,7 +6,7 @@
 # injection
 
 ```http
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/NotMie-cmd/Miskos-GUI/main/main.lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/NotMie-cmd/Miskos-GUI/main/main/main.lua"))()
 ```
 
 # reccomended executors
