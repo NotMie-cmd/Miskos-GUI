@@ -943,7 +943,7 @@ local script = G2L["4e"];
 		game.Loaded:Wait()
 	end
 	
-	local ver = "0.0.1"
+	local ver = "0.0.2"
 	local verDevelopment = "Pre-Alpha"
 	local verDis = game.Players.LocalPlayer.PlayerGui.ScreenGui.Frame.Frame.TextLabel
 	verDis.Text = "Misko's UI: version "..verDevelopment.." "..ver
