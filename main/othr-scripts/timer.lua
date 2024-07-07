@@ -1,9 +1,9 @@
 --[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+ d888b  db    db d888888b    .d888b.      db      db    db.d8b.  
 88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
 88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+88  ooo 88    88    88        .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88 .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
@@ -18,12 +18,12 @@ G2L["1"]["ResetOnSpawn"] = false;
 -- StarterGui.ScreenGui.timer
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
 G2L["2"]["Size"] = UDim2.new(0, 248, 0, 100);
 G2L["2"]["Position"] = UDim2.new(0.04688, 0, 0.07476, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Name"] = [[timer]];
-G2L["2"]["BackgroundTransparency"] = 1;
+G2L["2"]["BackgroundTransparency"] = 0;
 
 -- StarterGui.ScreenGui.timer.mil
 G2L["3"] = Instance.new("IntValue", G2L["2"]);
@@ -50,32 +50,32 @@ G2L["8"] = Instance.new("TextLabel", G2L["2"]);
 G2L["8"]["TextWrapped"] = true;
 G2L["8"]["BorderSizePixel"] = 0;
 G2L["8"]["TextScaled"] = true;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["TextSize"] = 14;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30); -- Dark gray background
+G2L["8"]["TextSize"] = 24; -- Increase font size
 G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Text"] = [[timer]];
+G2L["8"]["Text"] = [[00:00:00:00]];
 
 -- StarterGui.ScreenGui.timer.LocalScript
 local function C_7()
-local script = G2L["7"];
+	local script = G2L["7"];
 	local gui = script.Parent
 	local text = gui.TextLabel
-	
+
 	local miliseconds = gui.mil
 	local seconds = gui.seconds
 	local minutes = gui.minute
 	local hours = gui.hour
-	
+
 	miliseconds.Value = 0
 	seconds.Value = 0
 	minutes.Value = 0
 	hours.Value = 0
-	
+
 	local running = false
-	
+
 	local function onStart()
 		while running do
 			miliseconds.Value = miliseconds.Value + 1
@@ -95,7 +95,7 @@ local script = G2L["7"];
 			task.wait(0.001)
 		end
 	end
-	
+
 	local function toggleTimer()
 		if running then
 			running = false
@@ -111,7 +111,7 @@ local script = G2L["7"];
 			spawn(onStart)
 		end
 	end
-	
+
 	game:GetService("UserInputService").InputBegan:Connect(function(input)
 		if input.KeyCode == Enum.KeyCode.F then
 			toggleTimer()

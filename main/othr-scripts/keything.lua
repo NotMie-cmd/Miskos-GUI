@@ -20,7 +20,7 @@ G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["2"]["Size"] = UDim2.new(0, 185, 0, 200);
-G2L["2"]["Position"] = UDim2.new(0.75, 0, 0.75, 0);
+G2L["2"]["Position"] = UDim2.new(1, -185, 1, -100);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["BackgroundTransparency"] = 1;
 
@@ -28,8 +28,8 @@ G2L["2"]["BackgroundTransparency"] = 1;
 G2L["3"] = Instance.new("Frame", G2L["2"]);
 G2L["3"]["BorderSizePixel"] = 0;
 G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3"]["Size"] = UDim2.new(0, 82, 0, 80);
-G2L["3"]["Position"] = UDim2.new(0.32436, 0, -0.33502, 0);
+G2L["3"]["Size"] = UDim2.new(0, 66, 0, 66);
+G2L["3"]["Position"] = UDim2.new(0.21939, 0, -0.14502, 0);
 G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["Name"] = [[w]];
 G2L["3"]["BackgroundTransparency"] = 1;
@@ -61,8 +61,8 @@ G2L["6"]["Name"] = [[w]];
 G2L["7"] = Instance.new("Frame", G2L["2"]);
 G2L["7"]["BorderSizePixel"] = 0;
 G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["Size"] = UDim2.new(0, 82, 0, 80);
-G2L["7"]["Position"] = UDim2.new(-0.22162, 0, 0.14698, 0);
+G2L["7"]["Size"] = UDim2.new(0, 66, 0, 66);
+G2L["7"]["Position"] = UDim2.new(-0.22562, 0, 0.25804, 0);
 G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7"]["Name"] = [[a]];
 G2L["7"]["BackgroundTransparency"] = 1;
@@ -94,8 +94,8 @@ G2L["a"]["Name"] = [[a]];
 G2L["b"] = Instance.new("Frame", G2L["2"]);
 G2L["b"]["BorderSizePixel"] = 0;
 G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b"]["Size"] = UDim2.new(0, 82, 0, 80);
-G2L["b"]["Position"] = UDim2.new(0.32436, 0, 0.14698, 0);
+G2L["b"]["Size"] = UDim2.new(0, 66, 0, 66);
+G2L["b"]["Position"] = UDim2.new(0.21939, 0, 0.25804, 0);
 G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b"]["Name"] = [[s]];
 G2L["b"]["BackgroundTransparency"] = 1;
@@ -128,8 +128,8 @@ G2L["e"]["Position"] = UDim2.new(-0.00522, 0, 0, 0);
 G2L["f"] = Instance.new("Frame", G2L["2"]);
 G2L["f"]["BorderSizePixel"] = 0;
 G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["Size"] = UDim2.new(0, 82, 0, 80);
-G2L["f"]["Position"] = UDim2.new(0.87592, 0, 0.14698, 0);
+G2L["f"]["Size"] = UDim2.new(0, 66, 0, 66);
+G2L["f"]["Position"] = UDim2.new(0.66895, 0, 0.25804, 0);
 G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f"]["Name"] = [[d]];
 G2L["f"]["BackgroundTransparency"] = 1;
@@ -165,8 +165,8 @@ G2L["13"] = Instance.new("UICorner", G2L["2"]);
 G2L["14"] = Instance.new("Frame", G2L["2"]);
 G2L["14"]["BorderSizePixel"] = 0;
 G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["Size"] = UDim2.new(0, 292, 0, 37);
-G2L["14"]["Position"] = UDim2.new(-0.24324, 0, 0.64, 0);
+G2L["14"]["Size"] = UDim2.new(0, 238, 0, 30);
+G2L["14"]["Position"] = UDim2.new(-0.24324, 0, 0.6703, 0);
 G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["14"]["BackgroundTransparency"] = 1;
 
@@ -204,13 +204,11 @@ local script = G2L["18"];
 			local transparency = tweenService:Create(script.Parent.w, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
 				Transparency = 0
 			})
-	
 			transparency:Play()
 		elseif input.KeyCode == Enum.KeyCode.S then
 			local transparency = tweenService:Create(script.Parent.s, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
 				Transparency = 0
 			})
-			
 			transparency:Play()
 		elseif input.KeyCode == Enum.KeyCode.D then
 			local transparency = tweenService:Create(script.Parent.d, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
@@ -231,27 +229,27 @@ local script = G2L["18"];
 	end)
 	game:GetService("UserInputService").InputEnded:Connect(function(input)
 		if input.KeyCode == Enum.KeyCode.W then
-			local transparencyUn = tweenService:Create(script.Parent.w, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+			local transparencyUn = tweenService:Create(script.Parent.w, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
 				Transparency = 1
 			})
 			transparencyUn:Play()
 		elseif input.KeyCode == Enum.KeyCode.S then
-			local transparencyUn = tweenService:Create(script.Parent.s, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+			local transparencyUn = tweenService:Create(script.Parent.s, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
 				Transparency = 1
 			})
 			transparencyUn:Play()
 		elseif input.KeyCode == Enum.KeyCode.D then
-			local transparencyUn = tweenService:Create(script.Parent.d, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+			local transparencyUn = tweenService:Create(script.Parent.d, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
 				Transparency = 1
 			})
 			transparencyUn:Play()
 		elseif input.KeyCode == Enum.KeyCode.A then
-			local transparencyUn = tweenService:Create(script.Parent.a, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+			local transparencyUn = tweenService:Create(script.Parent.a, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
 				Transparency = 1
 			})
 			transparencyUn:Play()
 		elseif input.KeyCode == Enum.KeyCode.Space then
-			local transparencyUn = tweenService:Create(script.Parent.Frame, TweenInfo.new(0.05, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+			local transparencyUn = tweenService:Create(script.Parent.Frame, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
 				Transparency = 1
 			})
 			transparencyUn:Play()
